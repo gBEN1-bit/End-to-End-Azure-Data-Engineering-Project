@@ -30,11 +30,11 @@ The Tech Stack used includes some resources in Azure which are:
 
 ## End-to-End Data Pipeline
 
-![alt text](images/Pipeline1.png)
+![alt text](Images/Pipeline1.png)
 <p align="center"><em>Pipeline 1</em></p>
 
 
-![alt text](images/Pipeline2.png)
+![alt text](Images/Pipeline2.png)
 <p align="center"><em>Pipeline 2</em></p>
 
 ## Data Ingestion
@@ -44,7 +44,7 @@ The Data Ingestion process starts by connecting to the Data source (which is the
 
 - The first step in this data pipeline uses the lookup activity to look for all the tables belonging to a particular schema by using a sql query.
 
-![alt text](images/lookupscript.png)
+![alt text](Images/lookupscript.png)
 <p align="center"><em>select s.name as SchemaName, t.name as TableName from sys.tables t INNER JOIN sys.schemas s on t.schema_id = s.schema_id where s.name = ‘SalesLT’</em></p>
 
 - The second step uses the For Each activity to dynamically select * from all the tables in the result of the look up activity and store the data in the as-is-staging container in Azure Data Lake Storage Gen2 (in a parquet format).
@@ -65,12 +65,12 @@ The Data Ingestion process starts by connecting to the Data source (which is the
 ## Data Modeling and Visualization
 - Using Azure Synapse Analytics Data connector in Power BI the loaded data in the Azure Synapse Analytics is imported into Power BI to build simple interactive dashboards that provide real-time insights. You can view the dashboard [here](https://app.powerbi.com/view?r=eyJrIjoiOTUxYzZiZWMtYjViMS00NzkwLTk1YTQtMjFjZjQ2YTgwYjMzIiwidCI6IjBiMjFjNDRjLWI1ZDAtNDE1MS04OTI5LTNkZjc0Nzg2OTA0NiJ9).
 
-![alt text](images/dashboardviz.png)
+![alt text](Images/dashboardviz.png)
 <p align="center"><em>Dashboard</em></p>
 
 - Data Modeling is done in Power BI to communicate connections/relationships between data points and structures.
 
-![alt text](images/DataModel.png)
+![alt text](Images/DataModel.png)
 <p align="center"><em>Data Model</em></p>
 
 ## Security and Governance
@@ -81,5 +81,5 @@ The Data Ingestion process starts by connecting to the Data source (which is the
 ## Triggers
 - Triggers in ADF is used to schedule the refresh of the data by running the data pipeline at the specified time and interval.
 
-![alt text](images/Triggers.png)
+![alt text](Images/Triggers.png)
 <p align="center"><em>Triggers</em></p>
