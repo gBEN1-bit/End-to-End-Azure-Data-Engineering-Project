@@ -23,7 +23,7 @@ The Tech Stack used includes some resources in Azure which are:
 2. You need an Azure subscription or an Azure for student subscription.
 
 ## Project Architecture
-![alt text](images/architecture.png)
+![alt text](Images/architecture.png)
 <p align="center"><em>Project Architecture</em></p>
 
 *Note: Firstly, you need to create a resource group in Azure that houses all the resources listed above (aside the Microsoft Power BI).*
